@@ -58,6 +58,60 @@
             <p>Price: $60.00</p>
             <button>Add to Cart</button>
         </div>
+        <div class="product">
+            <img src="product7.jpg" alt="Product 7">
+            <h3>Product 7</h3>
+            <p>Price: $70.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product8.jpg" alt="Product 8">
+            <h3>Product 8</h3>
+            <p>Price: $80.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product9.jpg" alt="Product 9">
+            <h3>Product 9</h3>
+            <p>Price: $90.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product10.jpg" alt="Product 10">
+            <h3>Product 10</h3>
+            <p>Price: $100.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product11.jpg" alt="Product 11">
+            <h3>Product 11</h3>
+            <p>Price: $110.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product12.jpg" alt="Product 12">
+            <h3>Product 12</h3>
+            <p>Price: $120.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product13.jpg" alt="Product 13">
+            <h3>Product 13</h3>
+            <p>Price: $130.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product14.jpg" alt="Product 14">
+            <h3>Product 14</h3>
+            <p>Price: $140.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product15.jpg" alt="Product 15">
+            <h3>Product 15</h3>
+            <p>Price: $150.00</p>
+            <button>Add to Cart</button>
+        </div>
     </section>
 
     <!-- About Section -->
