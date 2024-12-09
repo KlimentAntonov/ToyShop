@@ -34,18 +34,50 @@
             <p>Price: $20.00</p>
             <button>Add to Cart</button>
         </div>
+        <div class="product">
+            <img src="product3.jpg" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>Price: $30.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product4.jpg" alt="Product 4">
+            <h3>Product 4</h3>
+            <p>Price: $40.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product5.jpg" alt="Product 5">
+            <h3>Product 5</h3>
+            <p>Price: $50.00</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="product6.jpg" alt="Product 6">
+            <h3>Product 6</h3>
+            <p>Price: $60.00</p>
+            <button>Add to Cart</button>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2>About Us</h2>
-        <p>We are a small online shop selling amazing products at affordable prices.</p>
+        <p>We are a small online shop selling amazing products at affordable prices. </p>
+        <p>We are committed to ensuring an excellent service and shopping experience. </p>
+        <p>We're dedicated to giving you the very best shopping experience, with a focus on quality, customer service, and uniqueness. </p>
+        <p>We believe that shopping should be a delightful experience where quality meets affordability. </p>
+        <p>We carefully curate every product we offer and strive to provide items that reflect both our personal values and the needs of our customers. </p>
+        <p>Whether you're looking for nice toys, or just browsing for inspiration, we want to ensure that each product meets your expectations for quality and style.</p>
+</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <p>Email: contact@onlineshop.com</p>
+        <p>If you have any questions or comments, please don't hesitate to contact us. We love hearing from our customers and are always happy to help.</p>
+
+        <p>Email: contact@onlinetoyshop.com</p>
         <p>Phone: +123 456 7890</p>
     </section>
 
