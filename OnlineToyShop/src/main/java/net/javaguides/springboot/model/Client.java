@@ -1,3 +1,9 @@
+package net.javaguides.springboot.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "client")
 public class Client {
     long id;
     String name;

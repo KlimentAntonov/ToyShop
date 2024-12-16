@@ -1,4 +1,9 @@
+package net.javaguides.springboot.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "toy")
 public class Toy {
     long id;
     String description;

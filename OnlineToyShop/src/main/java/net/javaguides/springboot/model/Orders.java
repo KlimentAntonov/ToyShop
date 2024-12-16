@@ -1,5 +1,12 @@
+
+
+package net.javaguides.springboot.model;
+
+import jakarta.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name = "orders")
 public class Orders {
     long id;
     double total_price;

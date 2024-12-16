@@ -1,3 +1,9 @@
+package net.javaguides.springboot.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "toy_orders")
 public class Toy_Orders {
     long id;
     long id_toy;
