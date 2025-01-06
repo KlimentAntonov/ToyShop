@@ -5,11 +5,22 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "toy")
 public class Toy {
-    long id;
-    String description;
-    double price;
-    String name;
-    String image;
+
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "price")
+    private double price;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "image")
+    private String image;
 
     public Toy() {
     }

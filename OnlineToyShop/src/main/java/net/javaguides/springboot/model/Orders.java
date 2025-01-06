@@ -8,9 +8,16 @@ import java.util.Date;
 @Entity
 @Table(name = "orders")
 public class Orders {
-    long id;
-    double total_price;
-    Date date_delivery;
+
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "total price")
+    private double total_price;
+
+    @Column(name = "date of delivery")
+    private Date date_delivery;
 
     public Orders() {
     }

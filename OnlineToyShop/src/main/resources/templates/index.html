@@ -1,74 +1,197 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
-<meta charset="ISO-8859-1">
-<title>Employee Management System</title>
-
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-	crossorigin="anonymous">
-	
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shop</title>
 </head>
 <body>
 
-	<div class="container my-2">
-	<h1>Employees List</h1>
-	
-	<a th:href = "@{/showNewEmployeeForm}" class="btn btn-primary btn-sm mb-3"> Add Employee </a>
-	
-		<table border="1" class = "table table-striped table-responsive-md">
-			<thead>
-				<tr>
-					<th>
-						<a th:href="@{'/page/' + ${currentPage} + '?sortField=firstName&sortDir=' + ${reverseSortDir}}">
-							Employee First Name</a>
-					</th>
-					<th>
-					<a th:href="@{'/page/' + ${currentPage} + '?sortField=lastName&sortDir=' + ${reverseSortDir}}">
-							Employee Last Name</a>
-					</th>
-					<th>
-					<a th:href="@{'/page/' + ${currentPage} + '?sortField=email&sortDir=' + ${reverseSortDir}}">
-							Employee Email</a>
-					</th>
-					<th> Actions </th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr th:each="employee : ${listEmployees}">
-					<td th:text="${employee.firstName}"></td>
-					<td th:text="${employee.lastName}"></td>
-					<td th:text="${employee.email}"></td>
-					<td> <a th:href="@{/showFormForUpdate/{id}(id=${employee.id})}" class="btn btn-primary">Update</a>
-					    <a th:href="@{/deleteEmployee/{id}(id=${employee.id})}" class="btn btn-danger">Delete</a>
-					</td>
-				</tr>
-			</tbody>
-		</table>
-		
-		<div th:if = "${totalPages > 1}">
-			<div class = "row col-sm-10">
-				<div class = "col-sm-2">
-					Total Rows: [[${totalItems}]] 
-				</div>
-				<div class = "col-sm-1">
-					<span th:each="i: ${#numbers.sequence(1, totalPages)}">
-						<a th:if="${currentPage != i}" th:href="@{'/page/' + ${i}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">[[${i}]]</a>
-						<span th:unless="${currentPage != i}">[[${i}]]</span>  &nbsp; &nbsp;
-					</span>
-				</div>
-				<div class = "col-sm-1">
-					<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
-					<span th:unless="${currentPage < totalPages}">Next</span>
-				</div>
-				
-				 <div class="col-sm-1">
-    				<a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages}+ '?sortField=' + ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
-					<span th:unless="${currentPage < totalPages}">Last</span>
-   				 </div>
-			</div>
-		</div>
-	</div>
+<!-- Header Section -->
+<header>
+    <h1>Welcome to Our Online Shop</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- Product Section -->
+<section id="products">
+    <h2>Products</h2>
+    <div class="product">
+        <img src="product1.jpg" alt="Product 1">
+        <h3>Product 1</h3>
+        <p>Price: $10.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product2.jpg" alt="Product 2">
+        <h3>Product 2</h3>
+        <p>Price: $20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product3.jpg" alt="Product 3">
+        <h3>Product 3</h3>
+        <p>Price: $30.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product4.jpg" alt="Product 4">
+        <h3>Product 4</h3>
+        <p>Price: $40.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product5.jpg" alt="Product 5">
+        <h3>Product 5</h3>
+        <p>Price: $50.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product6.jpg" alt="Product 6">
+        <h3>Product 6</h3>
+        <p>Price: $60.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product7.jpg" alt="Product 7">
+        <h3>Product 7</h3>
+        <p>Price: $70.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product8.jpg" alt="Product 8">
+        <h3>Product 8</h3>
+        <p>Price: $80.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product9.jpg" alt="Product 9">
+        <h3>Product 9</h3>
+        <p>Price: $90.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product10.jpg" alt="Product 10">
+        <h3>Product 10</h3>
+        <p>Price: $100.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product11.jpg" alt="Product 11">
+        <h3>Product 11</h3>
+        <p>Price: $110.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product12.jpg" alt="Product 12">
+        <h3>Product 12</h3>
+        <p>Price: $120.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product13.jpg" alt="Product 13">
+        <h3>Product 13</h3>
+        <p>Price: $130.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product14.jpg" alt="Product 14">
+        <h3>Product 14</h3>
+        <p>Price: $140.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="product15.jpg" alt="Product 15">
+        <h3>Product 15</h3>
+        <p>Price: $150.00</p>
+        <button>Add to Cart</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Us</h2>
+    <p>We are a small online shop selling amazing products at affordable prices. </p>
+    <p>We are committed to ensuring an excellent service and shopping experience. </p>
+    <p>We're dedicated to giving you the very best shopping experience, with a focus on quality, customer service, and uniqueness. </p>
+
+    </p>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or comments, please don't hesitate to contact us. We love hearing from our customers and are always happy to help.</p>
+
+    <p>Email: contact@onlinetoyshop.com</p>
+    <p>Phone: +123 456 7890</p>
+    <p>
+    </p>
+</section>
+
+<div style="height: 60px;"></div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Online Shop. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            background-color: #fff;
+            display: inline-block;
+        }
+
+        .product img {
+            max-width: 100px;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>

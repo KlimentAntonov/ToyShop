@@ -5,10 +5,19 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "toy_orders")
 public class Toy_Orders {
-    long id;
-    long id_toy;
-    long id_order;
-    int quantity;
+
+    @Id
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)
+    private long id;
+
+    @Column(name = "toy id")
+    private long id_toy;
+
+    @Column(name = "order id")
+    private long id_order;
+
+    @Column(name = "quantity")
+    private int quantity;
 
     public Toy_Orders() {
     }
