@@ -8,5 +8,6 @@ net\javaguides\springboot\service\EmployeeServiceImpl.class
 net\javaguides\springboot\model\Orders.class
 net\javaguides\springboot\model\Toy.class
 net\javaguides\springboot\service\ToyService.class
+net\javaguides\springboot\repository\ToyRepository.class
 net\javaguides\springboot\repository\EmployeeRepository.class
 net\javaguides\springboot\controller\EmployeeController.class
